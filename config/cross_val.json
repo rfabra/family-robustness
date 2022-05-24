@@ -1,0 +1,62 @@
+{
+	"paths" : {
+		"basedir" : "runs/run1",
+		"logs" : "logs",
+		"datasets" : "datasets",
+		"models" : "models",
+		"predictions" : "predictions",
+		"noisy_datasets" : "noisy_datasets",
+		"irt" : "irt",
+		"robustness_curves" : "robustness_curves",
+		"predictions_per_bin" : "predictions_per_bin",
+		"tmp" : "tmp",
+		"analytics" : {
+		  "datasets" : "analytics/datasets",
+		  "evaluation" : "analytics/evaluation",
+		  "irt" : "analytics/irt",
+		  "models" : "analytics/models",
+		  "noisy_predictions" : "analytics/noisy_predictions",
+		  "noisy_datasets" : "analytics/noisy_datasets",
+		  "robustness_curves_real" : "analytics/robustness_curves/real",
+		  "robustness_curves_predicted" : "analytics/robustness_curves/predicted",
+		  "predictions_per_bin_real" : "analytics/predictions_per_bin/real",
+		  "predictions_per_bin_predicted" : "analytics/predictions_per_bin/predicted"
+		}
+	},
+	"datasets" : {
+	  "optdigits" : 1792,
+	  "letter2" : 1886,
+	  "waveform-5000" : 58
+	},
+	"models" : [
+	  "mlp_7",
+    "multinom",
+    "fda_prune17",
+    "simpls_ncomp3",
+    "rda",
+    "knn_k3",
+    "lvq_3",
+    "svmPoly_d_2_s_0.1",
+    "gbm_3_50",
+    "RPART",
+    "JRip",
+    "ctree_c0.05",
+    "C5.0",
+    "PART",
+    "rf_mtry64",
+    "NB",
+    "rbf",
+    "rfRules_mtry64"
+	],
+	"irt" : {
+		"method" : "2PL",
+		"n_cycles" : 300,
+		"chunk_size" : 300,
+		"num_models" : 2000,
+		"num_bins" : 5
+	},
+	"noise" :  {
+		"instance_proportions" : [0.0, 0.2, 0.4, 0.6, 0.8, 1.0],
+		"magnitude" : 0.2
+	}
+}

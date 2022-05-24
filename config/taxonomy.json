@@ -1,0 +1,44 @@
+{
+  "TODO" : [
+    "Simplify this file: no need of dataset ID, nested analytics dir, etc."
+  ],
+	"paths" : {
+		"basedir" : "runs/run1",
+		"logs" : "logs",
+		"robustness_curves" : "robustness_curves",
+		"taxonomy" : "taxonomy",
+		"analytics" : {
+		  "taxonomy" : "analytics/taxonomy"
+		}
+	},
+	"datasets" : {
+	  "optdigits" : 1792,
+    "wall-robot-navigation" : 9942,
+    "letter2" : 1886
+	},
+	"models" : [
+	  "mlp_7",
+    "multinom",
+    "fda_prune17",
+    "simpls_ncomp3",
+    "rda",
+    "knn_k3",
+    "lvq_3",
+    "svmPoly_d_2_s_0.1",
+    "gbm_3_50",
+    "RPART",
+    "JRip",
+    "ctree_c0.05",
+    "C5.0",
+    "PART",
+    "rf_mtry64",
+    "NB",
+    "rbf"
+	],
+	"excluded_models" : [
+	  "rfRules_mtry64"
+	],
+	"noise" :  {
+		"instance_proportions" : [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+	}
+}
